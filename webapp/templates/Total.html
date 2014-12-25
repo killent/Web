@@ -1,0 +1,29 @@
+<ion-header-bar class="bar-positive">
+			<a class="button button-icon icon ion-reply" href="#/UseBankCard"></a>
+			<h1 class="title">Total</h1>
+</ion-header-bar>
+	 
+<ion-content class="padding">
+	<div class="row">
+		<div class="col col-33 rowboder">TOTAL</div>
+		<div class="col col-60 rowboder  ng-model="data.total">{{data.total}}</div>
+	</div>
+	<div class="row">
+		<div class="col col-33 rowboder">Amount(RM)</div>
+		<div class="col col-60 rowboder" ng-model="data.amount">{{data.amount}}</div>
+	</div>
+	<div class="row">
+		<div class="col col-33 rowboder">TIPS</div>
+		<div class="col col-60 rowboder" ng-model="data.tips">{{data.tips}}</div>
+	</div>
+	<div class="row">
+		<div class="col col-33 rowboder">TERMINAL TIME</div>
+		<div class="col col-60 rowboder" ng-model="data.total">{{data.time}}</div>
+	</div>
+	<div class="Totalconfirm">
+		<center><a href="#/Signature" style="color: #FFFFFF; text-decoration: none;">Confirm</a></center>
+	</div>
+	<div class="list">
+		<center><h4 class="fontcolor">verifying......</h4></center> 
+	</div>	
+</ion-content>

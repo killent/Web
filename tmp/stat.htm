@@ -1,0 +1,96 @@
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+    <title>Sign-in, Then Tabs Example</title>
+
+    <link href="http://code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+	
+  </head>
+
+  <body>
+    
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+             
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+    <script id="templates/sign-in.html" type="text/ng-template">
+      <ion-view title="Sign-In">
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input type="text" ng-model="user.username" placeholder="0.00"   id="amount">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="text" ng-model="user.password">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" ng-model="user.email">
+            </label>			
+          </div>
+          <div class="padding">
+			<a class="button button-block button-positive" ng-click="signIn(user)">
+              Sign-In
+            </a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+      <ion-view title="Home">
+        <ion-content padding="true">
+          <p>
+            <a class="button icon icon-right ion-chevron-right" href="#/home">Scientific Facts</a>
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+	<script type="text/javascript">
+	angular.module('ionicApp', ['ionic'])
+
+	.config(function($stateProvider, $urlRouterProvider) {
+
+	  $stateProvider
+		.state('signin', {
+		  url: '/sign-in',
+		  templateUrl: 'templates/sign-in.html',
+		  controller: 'SignInCtrl',
+		})
+		
+		.state('home', {
+		  url: '/home/:username/:password/:email',
+		  templateUrl: 'templates/home.html',
+		  controller: 'HomeTabCtrl',
+		})		
+
+	   $urlRouterProvider.otherwise('/sign-in');
+
+	})
+
+	.controller('SignInCtrl', function($scope, $state) {
+	  
+	  $scope.signIn = function(user) {
+		console.log('Sign-In data: ', user.username,user.password,user.email);
+		$state.go('home',{username:user.username,password:user.password,email:user.email});
+	  };
+	  
+	})
+
+	.controller('HomeTabCtrl', function($scope, $state, $stateParams) {
+		console.log('HomeTabCtrl');
+		console.log($stateParams);
+	});
+	</script>
+
+  </body>
+</html>

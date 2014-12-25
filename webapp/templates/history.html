@@ -1,0 +1,62 @@
+<ion-header-bar class="bar-positive" >
+	<h1 class="title">Record</h1>
+	<a class="item-icon-right"><i ng-model='bat' class={{bat}}></i></a>
+</ion-header-bar>
+
+<ion-content class="padding contentbg" ng-controller='History'>
+	<div class="list listmargin">
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
+				<input type="text" ng-model='searchItem' placeholder="Txn No.">
+			</label>
+			<button class="button button-outline button-stable button-small" ng-disabled="!searchItem" ng-click='doSearch()'>Search</button>
+		</div>
+	</div>		
+	<ul class="list listmargin">
+		<li class="item listitem">
+			<strong>DeviceID :</strong><span class="fontcolorhistory"> FF01001670042</span>
+		</li>
+		
+		<li class="item listitem">
+			<div class="row">
+				<div class="col col-50"><strong>PHP:</strong><span class="fontcolorhistory"> 60.88</span></div>
+				<div class="col col-50"><strong>Count :</strong><span class="fontcolorhistory"> 1</span></div>
+			</div>
+		</li>
+	</ul>
+	<ion-refresher on-refresh="doRefresh()"
+                     pulling-text="Pull to refresh..."
+                     refreshing-text="Refreshing!"
+                     refreshing-icon="ion-loading-c"> 
+                     
+      </ion-refresher>
+	  
+	  
+	<div class="list">
+		<a class="item  item-avatar itemhistory" ng-click="goDetail(item)" ng-repeat="item in items"> 
+			<img src="img/Card.png"> 
+		
+					 <table  border="0" cellspacing="0" cellpadding="0" >
+					  <tr >
+						<td width="1%"  class="fontcolorhistory" >{{item.cardtype}}<b>&nbsp;&nbsp;{{item.amount}}<b></td>
+						
+						<td width="8%"  >{{item.tradetype}}</td>
+						<td width="8%" >{{item.apprcode}}</td>
+					  </tr>
+					  <tr><td height="1" bgcolor="#000" colspan="3"></td></tr>
+					  <tr>
+						<td >{{item.tradetype}}</td>
+					  </tr>
+					  <tr>
+						<td >{{item.date}}</td>
+						<td width="8%">{{item.apprcode}}</td>
+					  </tr>
+					</table>  				
+				<tr><td height="1" bgcolor="#000"></td></tr>	
+		</a>
+		<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+	</div>
+	
+
+	
+</ion-content>	

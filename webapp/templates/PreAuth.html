@@ -1,0 +1,86 @@
+<ion-side-menus>
+	<ion-side-menu-content>
+		<ion-header-bar class="bar-positive"> 
+			<div class="buttons">
+				<div class="button button-clear" ng-click="toggleLeft()">
+				  <i class="icon ion-navicon"></i>
+				</div>
+			</div>
+			<h1 class="title">Pre-Auth</h1>
+				<a class="item-icon-right"><i ng-model='bat' class={{bat}}></i></a>
+		</ion-header-bar>
+		
+		<ion-content class="padding contentbg"> 
+			<div class="list homelistmargin">
+			
+			   <label class="item item-input">PHP:
+				 <input type="number" placeholder="0.00"  readonly  id="amount"  onclick="document.getElementById('check').checked=false">
+				 <input type="number" placeholder="0.00" readonly id="tips" style='display:none'>
+			  </label>
+			  
+			 <input type="checkbox"  id='check' style='display:none'>
+			</div>
+		
+			<div class="row">
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)" value="1" ><h1>1</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="2" ><h1>2</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="3" ><h1>3</h1></button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="4" ><h1>4</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="5" ><h1>5</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="6" ><h1>6</h1></button>
+				</div> 
+			</div>
+			<div class="row">
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="7" ><h1>7</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="8" ><h1>8</h1></button>
+				</div>
+				<div class="col col-33">
+				<button class="button button-positive" onclick="demo(this,1)"  value="9" ><h1>9</h1></button>
+				</div> 
+			</div>
+		
+			<div class="row">
+				<div class="col  col-33">
+					<button class="button button-positive" onclick="demo(this,3)"  value="0" ><h1>00</h1></button>
+				</div>
+				<div class="col  col-33">
+					<button class="button button-positive" onclick="demo(this,1)"  value="0" ><h1>0</h1></button>
+				</div>
+				<div class="col col-33">
+					<button class="button button-positive" onclick="demo(this,2)"            ><h1><</h1></button>
+				</div> 
+			</div> 
+		</ion-content>	
+
+		<div class="submitbutton confirm_button">
+			<center><a style="color: #FFFFFF;" ng-click="Insert(2)">OK</a></center>
+		</div>
+	</ion-side-menu-content> 
+		 
+	<ion-side-menu side="left">
+		<ion-header-bar class="bar-positive"></ion-header-bar>
+		<ion-content>
+			<a class="item" ng-click="toggleLeft()" href="#/tab/home">Sale</a>
+			<a class="item" ng-click="toggleLeft()">Pre-Auth</a>
+			<a class="item" ng-click="toggleLeft()" href="#/tab/Refund">Refund</a>
+			<a class="item" ng-click="toggleLeft()"href="#/tab/OfflineSale"> Offline Sale</a>
+			<a class="item" ng-click="toggleLeft()" href="#/tab/Void">Void</a> 
+		</ion-content>
+	</ion-side-menu>			
+</ion-side-menus> 	

@@ -1,0 +1,58 @@
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> 
+    
+    <title>Ionic Modal</title>
+
+    <link href="http://code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+  </head>
+  <body ng-controller="AppCtrl">
+    
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Contacts</h1>
+      <div class="buttons">
+        <button class="button button-icon ion-compose" ng-click="modal.show()">
+        </button>
+      </div>
+    </ion-header-bar>
+    
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view> 
+		  <div class="list">     
+			<ion-radio ng-repeat="item in serverSideList"
+					   ng-value="item.value"
+					   ng-model="data.serverSide"
+					   ng-click="serverSideChange(item)"
+					   name="server-side">
+			  {{ item.text }}
+			</ion-radio>  
+		  </div>  
+      </ion-modal-view>
+    </script>
+    <script type="text/javascript">
+	angular.module('ionicApp', ['ionic'])
+	.controller('AppCtrl', function($scope, $ionicModal) {  
+	  $scope.serverSideList = [
+		{ text: "Go", value: "go" },
+		{ text: "Python", value: "py" },
+		{ text: "Ruby", value: "rb" },
+		{ text: "Java", value: "jv" }
+	  ];
+	  
+	  $ionicModal.fromTemplateUrl('templates/modal.html', {
+		scope: $scope
+	  }).then(function(modal) {
+		$scope.modal = modal;
+	  }); 
+	   
+	  $scope.serverSideChange = function(item) {
+		console.log("Selected Serverside, text:", item.text, "value:", item.value);
+		$scope.modal.hide()
+	  };
+
+	});
+    </script>
+  </body>
+</html>

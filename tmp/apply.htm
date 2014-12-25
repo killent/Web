@@ -1,0 +1,18 @@
+<link href="http://code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+<script src="http://code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+<div style='text-align:center' ng-app="test">
+	<h1><p ng-controller="TestCtrl">
+		{{testValue}}
+	</p></h1>
+</div>
+
+<script type="text/javascript">
+	var app = angular.module('test', []);
+	app.controller('TestCtrl', function ($scope) {
+	   $scope.testValue = 0; 
+		setInterval(function() {
+			console.log($scope.testValue++);
+			$scope.$apply();
+		}, 500);
+	});
+</script>

@@ -1,0 +1,33 @@
+<html ng-app="mySuperApp">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Popups
+    </title>  
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">   
+    <link href="http://code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+  </head>
+  <body class="padding" ng-controller="PopupCtrl">
+    <button class="button button-positive" ng-click="showAlert()">
+      Alert
+    </button>
+	<script type="text/javascript">
+	angular.module('mySuperApp', ['ionic'])
+	.controller('PopupCtrl',function($scope, $ionicPopup, $timeout) {
+	   // An alert dialog
+	   var data = 'adobe';
+	   $scope.showAlert = function() {
+		 var alertPopup = $ionicPopup.alert({
+		   title: 'Don\'t eat that!',
+		   template: '<b>'+data+'</b>',
+		 });
+		 alertPopup.then(function(res) {
+		   console.log('Thank you for not eating my delicious ice cream cone');
+		   
+		 });
+	   };
+	});
+	</script>
+  </body>
+</html>

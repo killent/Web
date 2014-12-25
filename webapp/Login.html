@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	 <meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<meta content="telephone=no" name="format-detection" />
+	<link rel="stylesheet" href="css/login.css" />
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <!-- <script type="text/javascript" src="js/DevTransPlugin.js"></script> -->
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="logo">
+			<img src="img/Air_Pos_Logo.svg" />
+		</div>
+		<center><h1>Transaction Gateway</h1></center>
+		<form method="post" action='home.html' class="form"> 
+		    <div class="form-group">
+		        <input type="email" class="form-control" id="inputEmail" placeholder=" Device SN"/>
+		    </div>
+		    <div class="form-group">
+		        <input type="password" class="form-control" id="inputPassword" placeholder=" Password"/>
+		    </div> 
+		    <div class="checkbox">
+		        <label id='add'><input type="checkbox" id='chk'> Remember me</label>  
+		        <a class="forget">Forgot PassWord？</a>
+		    </div>
+		    <a type="submit" class="btn btn-primary" onclick="login()">Login</a>
+		</form>
+
+		<div class="Bluetooth">
+			<img src="img/Bluetooth.png"/>
+		</div>	
+	</div>
+    <script>
+	$=function(id){return typeof id=="string"?document.getElementById(id):id;};
+	
+	var checkbox = Boolean(parseInt(localStorage.getItem('checkbox')));
+	$('chk').checked = checkbox;
+	if(chk.checked)
+		if(localStorage.getItem('ksn')==$$('inputEmail').value)
+			$('inputPassword').value = localStorage.getItem('password');
+	
+	function login(){
+		var ksn = $('inputEmail').value;
+		var psw = $('inputPassword').value;
+		var chk = $("chk").checked;
+		if(chk)
+		{
+			localStorage.setItem('checkbox',1);
+			localStorage.setItem('ksn',ksn);
+			localStorage.setItem('password',psw);
+		}
+		else
+		{
+			localStorage.setItem('checkbox',0);
+		}	
+	}
+    </script>
+</body>
+</html>

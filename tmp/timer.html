@@ -1,0 +1,31 @@
+<script type="text/javascript">
+var count = 0;
+var count1 = 0;
+var timeID,timeID1;
+function timeCount()
+{
+  document.getElementById('timetxt').value = count;
+  document.getElementById('timetxt1').value = count1; 
+  count++;
+  count1++;
+}
+
+function beginCount()
+{
+  timeID = setInterval("timeCount()",1000);
+  timeID1 = setInterval("timeCount()",1000);
+}
+function stopCount()
+{
+  clearInterval(timeID);
+}
+function stopCount1()
+{
+  clearInterval(timeID1);
+}
+</script>
+<input type="button" value="开始计时" onclick="beginCount()" />
+<input type="text" id="timetxt" size="5" />
+<input type="text" id="timetxt1" size="5" />
+<input type="button" value="停止计时" onclick="stopCount()" />
+<input type="button" value="停止计时1" onclick="stopCount1()" />

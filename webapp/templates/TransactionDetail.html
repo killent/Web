@@ -1,0 +1,55 @@
+<ion-header-bar class="bar-positive">
+	<a class="button button-icon icon ion-reply" href="#/tab/history"></a> 
+	<h1 class="title">TransactionDetail</h1>
+</ion-header-bar>
+<ion-content class="padding contentbg">
+	<div class="list">
+		<table cellpadding="0" cellpadding="0" align="left"  width="100%" class="DetailTable" bgcolor="#FFFFFF">
+			<tr>
+				<td width="45%">Payment Type:</td>
+				<td ng-model="data.tradetype">{{data.tradetype}}</td>
+			</tr>
+			<tr>
+				<td>Card NO.</td>
+				<td>aa</td>
+			</tr>
+			<tr>
+				<td>Card Type</td>
+				<td ng-model="data.cardtype">{{data.cardtype}}</td>
+			</tr>
+			<tr>
+				<td>Ref No.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Auth No.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Txn No.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>BTH No.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Device ID</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>DateTime</td>
+				<td ng-model="data.date">{{data.date}}</td>
+			</tr>
+		</table>
+		<table class="list card" width="100%">
+			<tr>
+				<td class="total" ng-model="data.amount"><br />PHP: {{data.amount}}<br /><br /></td>
+			</tr>
+		</table>
+		<div class="button-bar bar-positive" ng-controller="PopupCtrl"> 
+		  <a class="button voidbutton" ng-click="showPopup()">Void</a>
+		  <a class="button voidbutton">Confirm</a>
+		</div>
+	</div>	
+</ion-content> 

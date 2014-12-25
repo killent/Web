@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="http://killent.qiniudn.com/canvasRotate.jpg" alt="tulip" id="tulip" style="margin-left:0px;" />
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="400" height="200" >
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+document.getElementById("tulip").onload=function(){
+  var canvas=document.getElementById("myCanvas");
+  var ctx=canvas.getContext("2d");
+  var img=document.getElementById("tulip");
+  
+  ctx.translate(400, 1/2);
+  ctx.rotate(Math.PI / 2);	
+  ctx.drawImage(img,0,0,200,400,0,0,200,400);
+  
+};
+</script>
+
+</body>
+</html>

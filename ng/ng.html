@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular.min.js"></script>
+    </head>
+    <body>		
+		<div data-ng-app>
+			price: <input type="number" min=0 ng-model="price" ng-init="price = 29.9">
+			<br>
+			quantity: <input type="number" min=0 ng-model="quantity" ng-init="quantity = 1">
+			<br>
+			amount: {{ quantity * price }}
+		</div>
+		
+		
+		<div ng-init="friends = [{name:'John', age:25}, {name:'Mary', age:28}]">
+			I have {{friends.length}} friends. They are:
+			<ul>
+				<li ng-repeat="friend in friends">
+					[{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+				</li>
+			</ul>
+		</div>
+		
+    </body>
+</html>

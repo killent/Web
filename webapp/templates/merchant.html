@@ -1,0 +1,59 @@
+<ion-header-bar class="bar-positive">
+	<h1 class="title">Merchant</h1>
+	<a class="item-icon-right"><i ng-model='bat' class={{bat}}></i></a>
+</ion-header-bar>
+			
+<ion-content class="padding contentbg">
+	<div class="card">	
+		<div class="item item-divider item-right item-icon-right">Amount Limits <a class="button button-icon icon ion-loop fontcolor"></a></div>
+		<table width="100%" cellpadding="0" cellspacing="0" class="itemtable">
+			<tr><td height="10px"></td></tr>
+			<tr>
+				<td width="5%"></td>
+				<td width="40%" >Daily Ceiling</td>
+				<td width="55%" align="left">RM 4900.00</td>  
+			</tr>
+			<tr>
+				<td width="5%"></td>
+				<td width="40%">Monthly Ceiling</td>
+				<td width="55%" align="left">RM 9900.00</td>
+			</tr>
+			<tr><td height="10px"></td></tr>
+		</table>
+
+	<div ng-controller="PopupCtrl">
+		<a class="item item-icon-left item-icon-right" ng-click="showPopup()">
+			<i class="icon ion-ios7-calculator fontcolor"></i>
+			Settlement
+			<i class="icon ion-arrow-right-c fontcolor"></i>
+		</a>
+
+		<a class="item item-icon-left item-icon-right" href="#/MerchantManagment">
+			<i class="icon ion-person fontcolor"></i>
+			Merchant Managment
+			<i class="icon ion-arrow-right-c fontcolor"></i>
+		</a> 
+		  
+		<a class="item item-icon-left item-icon-right" href="tel:027-50666959">
+			<i class="icon ion-ios7-telephone fontcolor"></i>
+			Contact Us
+			<i class="icon ion-arrow-right-c fontcolor"></i>
+		</a>
+
+		<a class="item item-icon-left item-icon-right" href="#/about"> 
+			<i class="icon ion-information-circled fontcolor"></i>
+			About
+		   <i class="icon ion-arrow-right-c fontcolor"></i>
+		</a>
+		<a class="item item-icon-left item-icon-right" href="#/DeviceInfo">
+			<i class="icon ion-filing fontcolor"></i>
+			Device Info
+			<i class="icon ion-arrow-right-c fontcolor"></i>
+		</a>
+	</div> 
+	</div>
+
+	<div class="list">
+	<a class="button button-full button-energized" href="Login.html"><h1 style="color: #FFFFFF; height: 1.5em;line-height: 1.5em;">Logout</h1></a>
+	</div>
+</ion-content> 		

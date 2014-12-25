@@ -1,0 +1,9 @@
+#templete
+ionic start myApp tabs
+ionic start myApp tabs
+ionic start myApp sidemenu
+
+#build
+cd myApp
+ionic platform add android
+ionic build android

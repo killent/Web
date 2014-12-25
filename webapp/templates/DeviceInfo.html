@@ -1,0 +1,43 @@
+<ion-header-bar class="bar-positive">
+	<a class="button button-icon icon ion-reply" href="#/tab/merchant"></a>
+	<h1 class="title"> DeviceInfo</h1>
+</ion-header-bar>
+		
+<ion-content class="padding" ng-controller="DeviceInfo">
+	<div class="card">
+		  <div class="item item-divider itemtable">
+			<table width="100%" cellpadding="0" cellspacing="0" >
+				<tr>
+					<td width="50%" >Battery</td>
+					<td width="50%" align="right" ng-model="Device.Batteryinfo">{{Device.Batteryinfo || 'Unknown'}}</td> 
+				</tr>
+				<tr>
+					<td width="50%">Bootloader Version</td>
+					<td width="50%" align="right" ng-model="Device.Version">{{Device.Version || 'Unknown'}}</td>
+				</tr>
+				<tr>
+					<td width="50%">Firnware Version</td>
+					<td width="50%" align="right" ng-model="Device.Firnware">{{Device.Firnware || 'Unknown'}}</td>
+				</tr>
+				<tr>
+					<td width="50%">Hardware Version</td>
+					<td width="50%" align="right" ng-model="Device.Hardware">{{Device.Hardware || 'Unknown'}}</td>
+				</tr>
+				<tr>
+					<td width="50%">Charg</td>
+					<td width="50%" align="right" ng-model="Device.Charginfo">{{Device.Charginfo || 'Unknown'}}</td> 
+				</tr>
+				<tr>
+					<td width="50%">Usb Connect</td>
+					<td width="50%" align="right" ng-model="Device.Connect">{{Device.Connect || 'Unknown'}}</td> 
+				</tr>
+				<tr>
+					<td width="50%">Device Type</td>
+					<td width="50%" align="right" ng-model="Device.Type">{{Device.Type || 'Unknown'}}</td>
+				</tr>
+			</table>
+		  </div>
+		  <center ><h4 class="fontcolor">{{Status || 'Device is not connect'}}</h4></center>
+	  </div>
+	
+</ion-content>				

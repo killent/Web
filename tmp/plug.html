@@ -1,0 +1,116 @@
+<script type="text/javascript">
+
+//plugin
+function DevTransPlugin() {
+	this.pluginRef = 'DevTransPlugin';
+	this.action = 'run_action';
+};
+        
+DevTransPlugin.prototype.StartAudio = function (succ, fail) {
+	// return cordova.exec(succ, fail, this.pluginRef, this.action, ['audio_start']);
+	console.log('StartAudio');
+};
+
+DevTransPlugin.prototype.StartBluetooth = function (succ, fail) {
+	// return cordova.exec(succ, fail, this.pluginRef, this.action, ['bluetooth_start']);
+	console.log('StartBluetooth');
+};
+
+DevTransPlugin.prototype.GetKsn = function (succ, fail) {
+	// return cordova.exec(succ, fail, this.pluginRef, this.action, ['get_ksn']);
+	console.log('GetKsn');
+};
+
+DevTransPlugin.prototype.ResetDevice = function (succ, fail) {
+	// return cordova.exec(succ, fail, this.pluginRef, this.action, ['dev_reset']);
+	console.log('ResetDevice');
+};
+
+DevTransPlugin.prototype.SetAmount = function (succ, fail, amount, tips, currly) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['set_amount',amount, tips, currly]);
+	console.log('SetAmount');
+};
+
+DevTransPlugin.prototype.EmvStart = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['emv_start']);
+	console.log('EmvStart');
+};
+
+DevTransPlugin.prototype.CheckCard = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['card_check']);
+	console.log('CheckCard');	
+};
+
+DevTransPlugin.prototype.SelectApp = function (succ, fail, code) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['sel_app',code]);
+	console.log('SelectApp');			
+};
+
+DevTransPlugin.prototype.SaleReq = function (succ, fail, trantype, apprcode) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['pack_sale',trantype, apprcode]);
+	console.log('SaleReq');		
+};
+
+DevTransPlugin.prototype.GetMsg = function (succ, fail, base64code) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['pack_getmsg',base64code]);
+	console.log('GetMsg');		
+};
+
+DevTransPlugin.prototype.ClearAction = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['clear_action']);
+	console.log('ClearAction');		
+};
+
+DevTransPlugin.prototype.ClearActionData = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['clear_action_result']);
+	console.log('ClearActionData');		
+};
+
+DevTransPlugin.prototype.ClearStage = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['clear_stage']);
+	console.log('ClearStage');		
+};
+
+DevTransPlugin.prototype.ClearResponse = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['clear_response']);
+	console.log('ClearResponse');		
+};
+
+DevTransPlugin.prototype.ClearAll = function (succ, fail) {
+	// return cordova.exec(succ, fail,  this.pluginRef, this.action, ['clear_all']);
+	console.log('ClearAll');		
+};
+
+
+DevTransPlugin.prototype.GetResponse = function (response) {
+	// return cordova.exec(succ, fail, this.pluginRef, this.action, ['get_response']);
+	//console.log('GetResponse');
+	this.Act = response[0];
+	this.ActData = response[1];
+	this.Stage = response[2];
+	this.Response = response[3];
+	this.Error = response[4];
+	return this;
+	//console.log(ret.Response);
+
+};
+
+function Parse(response) {
+
+	return this;
+}
+
+var devtrans = new DevTransPlugin();
+devtrans.CheckCard();
+
+var intid = setInterval(EmvCallback, 2000);
+//clearInterval(intid);	
+
+var res = [5,1,2,3,4];
+function EmvCallback (res) {
+	//console.log(devtrans.GetResponse(res).ActData);
+	var app = new devtrans.GetResponse(res);
+	console.log(app.Act);
+}
+
+</script>

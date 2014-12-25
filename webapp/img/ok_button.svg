@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="390px"
+	 height="192px" viewBox="0 0 390 192" enable-background="new 0 0 390 192" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<g display="inline">
+		
+			<radialGradient id="SVGID_1_" cx="135.1553" cy="116.5342" r="105.1497" gradientTransform="matrix(1.4127 0 0 1.391 4.1284 -62.5999)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.2473" style="stop-color:#1C1C1C"/>
+			<stop  offset="1" style="stop-color:#666666"/>
+		</radialGradient>
+		<path opacity="0.9" fill="url(#SVGID_1_)" stroke="#44A1FC" stroke-width="12.6165" stroke-miterlimit="10" d="M7.163,192
+			C7.163,89.825,91.287,7,195.062,7C298.84,7,382.961,89.825,382.961,192"/>
+		<g opacity="0.9">
+			<g>
+				<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" d="M25.23,191.612
+					c0-0.47,0.001-0.944,0.006-1.414"/>
+				
+					<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" stroke-dasharray="2.861,1.4305,2.861,1.4305" d="
+					M25.253,188.784c0.044-2.61,0.151-5.204,0.317-7.783"/>
+				
+					<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" stroke-dasharray="2.861,1.4305,2.861,1.4305,2.861,1.4305" d="
+					M25.617,180.297c5.943-86.52,79.536-154.894,169.444-154.894c93.072,0,168.658,73.27,169.819,164.089"/>
+				<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" d="M364.889,190.198
+					c0.004,0.47,0.007,0.944,0.007,1.414"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Layer_2">
+	<g>
+		
+			<radialGradient id="SVGID_2_" cx="130.6797" cy="116.499" r="105.1497" gradientTransform="matrix(1.4127 0 0 1.391 10.4507 -62.551)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.1472" style="stop-color:#1C1C1C;stop-opacity:0.9"/>
+			<stop  offset="0.9141" style="stop-color:#58595B"/>
+		</radialGradient>
+		<path opacity="0.9" fill="url(#SVGID_2_)" stroke="#44A1FC" stroke-width="12.6165" stroke-miterlimit="10" d="M7.163,192
+			C7.163,89.825,91.287,7,195.061,7c103.779,0,187.9,82.825,187.9,185"/>
+		<g opacity="0.9">
+			<g>
+				<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" d="M25.231,191.612
+					c0-0.47,0.001-0.943,0.005-1.414"/>
+				
+					<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" stroke-dasharray="2.8609,1.4305,2.8609,1.4305" d="
+					M25.254,188.784c0.043-2.608,0.152-5.205,0.317-7.783"/>
+				
+					<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" stroke-dasharray="2.8609,1.4305,2.8609,1.4305,2.8609,1.4305" d="
+					M25.617,180.296c5.944-86.52,79.537-154.893,169.445-154.893c93.075,0,168.659,73.268,169.82,164.089"/>
+				<path fill="none" stroke="#ABADB0" stroke-width="2.8589" stroke-miterlimit="10" d="M364.89,190.198
+					c0.004,0.471,0.007,0.944,0.007,1.414"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

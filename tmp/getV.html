@@ -1,0 +1,36 @@
+<html ng-app="ionicApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>Example</title>
+	<link href="http://code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+	<script src="http://code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+</head>
+
+<body>
+	<ion-content class="has-header">
+	<div class="hide-on-keyboard-open">
+	<div class="list list-inset" ng-controller = "LoginCtrl">
+		<label class="item item-input">
+			<input type="text"  ng-model="code">
+		</label>
+		<button ng-click="setCode()" class="button button-block button-positive">GetV</button>
+	</div>
+	<div>
+	<label class="item item-input">
+	  <span class="input-label">Email</span>
+	  <input type="email">
+	</label>
+	</ion-content>
+
+
+	<script type="text/javascript">
+	angular.module('ionicApp', ['ionic'])
+	.controller('LoginCtrl', function($scope) {
+		$scope.setCode = function(){
+			alert($scope.code);
+		}
+	})
+	</script>
+</body>
+</html>	
